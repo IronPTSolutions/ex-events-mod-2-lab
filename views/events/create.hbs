@@ -1,0 +1,44 @@
+<form action="/create-event" method="post" enctype="application/x-www-form-urlencoded">
+
+  <div class="mb-3">
+    <label for="title" class="form-label">Title</label>
+    <input type="text" name="title" class="form-control {{#if errors.title}}is-invalid {{/if}}">
+    {{#if errors.title}}<div class="invalid-feedback">{{errors.title}}</div>{{/if}}
+  </div>
+  <div class="mb-3">
+    <label for="description" class="form-label">Description</label>
+    <textarea name="description" class="{{#if errors.description}}is-invalid {{/if}}"></textarea>
+    {{#if errors.description}} <div class="invalid-feedback">{{errors.description}}</div>{{/if}}
+  </div>
+  
+  <div class="mb-3">
+    <label for="capacity" class="form-label">Capacity</label>
+    <input type="number" name="capacity" class="form-control {{#if errors.capacity}}is-invalid {{/if}}">
+    {{#if errors.capacity}} <div class="invalid-feedback">{{errors.capacity}}</div>{{/if}}
+  </div>
+
+  <div class="mb-3">
+    <label for="start" class="form-label">Start</label>
+    <input type="date" name="start" class="form-control {{#if errors.start}}is-invalid {{/if}}">
+    {{#if errors.start}} <div class="invalid-feedback">{{errors.start}}</div>{{/if}}
+  </div>
+  
+   <div class="mb-3"> 
+    <label for="end" class="form-label">End date</label>
+    <input type="date" name="end" class="form-control {{#if errors.end}}is-invalid {{/if}}">
+    {{#if errors.end}} <div class="invalid-feedback">{{errors.end}}</div>{{/if}}
+  </div>
+
+  <div class="mb-3">
+    <label for="image" class="form-label">URL Image</label>
+    <input type="text" name="image" class="form-control {{#if errors.image}}is-invalid {{/if}}">
+    {{#if errors.image}} <div class="invalid-feedback">{{errors.image}}</div>{{/if}}
+  </div>
+
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+
+    <a href="/events">Go back</a>
+
+</form>
+
