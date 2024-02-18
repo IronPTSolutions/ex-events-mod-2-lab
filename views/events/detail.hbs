@@ -1,0 +1,20 @@
+<div class="col mb-3">
+      <div class="card" style="width: 18rem;">
+        <img src={{event.image}} class="card-img-top" alt={{event.title}}>
+
+        <div class="card-body">
+          <h5 class="card-title">{{event.title}}</h5>
+          <p class="card-text">Description: {{event.description}}</p>
+          <p class="card-text">Capacity: {{event.capacity}}</p>
+          <p class="card-text">{{formatDate event.start}} to {{formatDate event.end}}</p>
+          <ul>
+            {{#each event.tags}}
+                <li>
+                {{this}}
+                </li>
+            {{/each}}
+          </ul>
+          <a href="/events">Go back</a>
+        </div>
+      </div>
+    </div>
