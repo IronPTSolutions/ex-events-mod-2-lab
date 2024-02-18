@@ -10,6 +10,9 @@
           <h5 class="card-title">{{title}}</h5>
           <p class="card-text">{{formatDate start}} to {{formatDate end}}</p>
           <a href="/events/{{_id}}">Information</a>
+          <div>
+            <a href="/events/{{_id}}/delete" class="btn btn-danger"><i class="bi bi-trash3">Delete</i></a>
+          </div>
         </div>
       </div>
     </div>
